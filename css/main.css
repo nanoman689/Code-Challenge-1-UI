@@ -4,6 +4,10 @@ html,body {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* Bold Font */
 h1 {
     font-family: 'Karla', sans-serif;
@@ -38,6 +42,8 @@ h2 {
 .mainTextBox {
     z-index: 3;
     position:absolute;
+    right:10%;
+    bottom:20%;
     width: 415px;
     height: 259px;
 }
@@ -77,6 +83,20 @@ input.button {
   height: 19px;
 }
 
+.arrow {
+    width: 10px;
+    margin: 0 auto;
+}
+
+.arrowDown {
+    position: absolute;
+    bottom: 2%;
+    color: white;
+    font-size: 5em;
+    z-index: 3;
+    transform:scale(0.2,0.85);
+} 
+
 /* Top Menu */
 
 .parallaxTop {
@@ -111,8 +131,7 @@ input.button {
 /* Lower Menu */
 
 .parallaxBottom {
-    min-height: 1830px;
-    min-width: 1100px;
+    min-height: 800px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -125,41 +144,120 @@ img.photoTwo {
     margin: 0 auto;
 }
 
+.photoMain{
+    margin: 0 auto;
+}
+
+.line1 {
+    width: 373px;
+    height: 47px;
+    border-bottom: 1px solid black;
+    -webkit-transform:
+        translateY(75%)
+        translateX(5px)
+        rotate(72deg); 
+    position: absolute;
+}
+/* Lines over the photo */
+
+.boxForLines {
+    margin: 0 auto;
+    position: relative;
+    width: 145%;
+    margin-left: -24%;
+    margin-top: -59%;
+}
+
+.boxLine1 {
+    position: absolute;
+    margin-left: 67%;
+    margin-top: 12%;
+}
+
+.boxLine2 {
+    position: absolute;
+    margin-left: 8%;
+    margin-top: 20%;
+}
+
 .bottomBox {
     width: 100%;
     display: flex;
+    margin-top:20px;
+    flex-direction:column;
+    margin-top:11%;
 }
 
 /* Lower Page Menu things */
 
+.bottomTextTop{
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+    color: black;
+    font-size:30px;
+    margin: 0 auto;
+    margin-bottom: 3%;
+}
+
 p.menuText {
     margin-left: 15px;
+    margin-top: 23px;
     color: rgba(16,59,88,100);   
 }
 
-.bottomMenu {
+#bottomMenu {
     box-shadow: 0px 17px 59px -23px rgba(0,0,0,0.72);
     display: flex;
+    height: 61px;
+    z-index: 4;
 }
 
-.burgerIcon {
+/* burger lines with just CSS */
+
+.burger {
     position: relative;
     display: inline-block;
+    left: 86%;
+    top: 40%;
     width: 22px;
     height: 3px;
-    margin-right: 0.3em;
-    background-color: rgba(16,59,88,100);
-    border-top: 0.2em solid #fff;
-    border-bottom: 0.2em solid #fff;
+    margin-right: 2px;
+    border-top: 3px solid rgba(16,59,88,100);;
+    border-bottom: 3px solid rgba(16,59,88,100);;
 }
 
-.burgerIcon:before {
+.burger:before {
     content: "";
     position: absolute;
-    top: 0.3em;
+    top: 10px;
     left: 0px;
     width: 100%;
-    border-top: 0.2em solid #fff;
+    border-top: 3px solid rgba(16,59,88,100);;
+}
+
+/* Footer */
+
+.footerBox {
+    margin-top: 2%;
+    display: table;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 20px;
+}
+
+.footerTitle {
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: rgba(16,59,88,100);
+}
+
+.footerLink {
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(16,59,88,100);
 }
 
 /* Gradient (24,118,186, 50% overlay with midpoint at 40%) */
