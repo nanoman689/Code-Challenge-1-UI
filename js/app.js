@@ -12,16 +12,25 @@ $(function() {
                 position: 'fixed',
                 top: 0,
                 left: nav.offset().left,
-                width: nav.width()
+                width: '100%'
             });
             isFixed = true;
         }
         else if (!shouldBeFixed && isFixed)
         {
             nav.css({
-                position: 'static'
+                position: 'relative',
+                top: '-60px'
             });
             isFixed = false;
         }
     });
+    
+    $("#arrow-frame").click(function() {
+    
+    $('html,body').animate({
+        scrollTop: $(".secondMenu").offset().top},
+        'slow');
+    });
+
 });

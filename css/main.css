@@ -43,7 +43,7 @@ h2 {
     z-index: 3;
     position:absolute;
     right:10%;
-    bottom:20%;
+    bottom:35%;
     width: 415px;
     height: 259px;
 }
@@ -60,8 +60,6 @@ h2 {
     margin-bottom: 10px;
     margin-left: 2px;
 }
-
-
 
 .button {
     margin-left: 4px;
@@ -83,19 +81,59 @@ input.button {
   height: 19px;
 }
 
-.arrow {
+
+/* arrow */
+
+#arrow {
     width: 10px;
     margin: 0 auto;
+    cursor: pointer;
 }
 
-.arrowDown {
-    position: absolute;
-    bottom: 2%;
-    color: white;
-    font-size: 5em;
+.arrow-frame {
+    margin: 0 auto;
+	width: 50px;
+	height: 50px;
     z-index: 3;
-    transform:scale(0.2,0.85);
-} 
+    position: absolute;
+    bottom:13%;
+    z-index: 3;
+}
+.arrow-shaft {
+	background-color: #fff;
+	width: 3px;
+	height: 48px;
+	margin: 0 auto;
+	top: 8px;
+	position: relative;
+}
+.arrow-head {
+	display: inline;
+	position: relative;
+	margin: 0 auto;
+	left: 21px;
+	bottom: 3px;
+}
+.arrow-head-left {
+	background-color: white;
+	width: 4px;
+	height: 10px;
+	display: inline-block;
+	margin: -1px;
+	-ms-transform: rotate(325deg);
+	-webkit-transform: rotate(325deg); 
+	transform: rotate(-45deg);
+}
+.arrow-head-right {
+	background-color: white;
+	width: 4px;
+	height: 10px;
+	display: inline-block;
+	margin: -1px;
+	-ms-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg); 
+	transform: rotate(45deg);
+}
 
 /* Top Menu */
 
@@ -170,14 +208,14 @@ img.photoTwo {
 
 .boxLine1 {
     position: absolute;
-    margin-left: 67%;
+    margin-left: 69%;
     margin-top: 12%;
 }
 
 .boxLine2 {
     position: absolute;
-    margin-left: 8%;
-    margin-top: 20%;
+    margin-left: 5%;
+    margin-top: 22%;
 }
 
 .bottomBox {
@@ -210,6 +248,10 @@ p.menuText {
     display: flex;
     height: 61px;
     z-index: 4;
+    background-color: white;
+    position: relative;
+    top: -60px;
+    z-index: 3;
 }
 
 /* burger lines with just CSS */
