@@ -290,6 +290,10 @@ p.menuText {
 
 /* Footer */
 
+footer {
+    margin-top: -50px;
+}
+
 .footerBox {
     margin-top: 2%;
     display: table;
