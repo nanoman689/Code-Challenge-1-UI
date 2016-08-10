@@ -26,11 +26,10 @@ $(function() {
         }
     });
     
-    $("#arrow-frame").click(function() {
-    
-    $('html,body').animate({
-        scrollTop: $(".secondMenu").offset().top},
-        'slow');
+    $("#arrow").click(function() {
+        $('html,body').animate({
+            scrollTop: $(".secondMenu").offset().top},
+            'slow');
     });
 
 });
