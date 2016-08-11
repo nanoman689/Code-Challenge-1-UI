@@ -1,7 +1,7 @@
 $(function() {
     // Stick the #nav to the top of the window
     var nav = $('#bottomMenu');
-    var footer = $('footer');
+    var bottom = $('.parallaxBottom');
     var navHomeY = nav.offset().top;
     var isFixed = false;
     var $w = $(window);
@@ -15,20 +15,20 @@ $(function() {
                 left: nav.offset().left,
                 width: '100%'
             });
-            footer.css({
-                "margin-top" :'10px'
-            })
+            bottom.css({
+                "margin-top":'61px'
+            });
             isFixed = true;
         }
         else if (!shouldBeFixed && isFixed)
         {
             nav.css({
                 position: 'relative',
-                top: '-60px'
+                top: '-61px'
             });
-            footer.css({
-                "margin-top" :'-50px'
-            })
+            bottom.css({
+                "margin-top":'0'
+            });
             isFixed = false;
         }
     });

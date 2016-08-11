@@ -16,6 +16,14 @@ h1 {
     margin: 0;
 }
 
+.bold {
+    font-family: 'Karla', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+}
+
 /* Regular Font */
 h2 {
     font-family: 'Karla', sans-serif;
@@ -32,13 +40,7 @@ h2 {
     margin: 0;
 }
 
-.bold {
-    font-family: 'Karla', sans-serif;
-    font-size: 48px;
-    font-weight: 700;
-    color: white;
-    margin: 0;
-}
+
 .mainTextBox {
     z-index: 3;
     position:absolute;
@@ -61,11 +63,11 @@ h2 {
     margin-left: 2px;
 }
 
+/* Buttons */
+
 .button {
     margin-left: 4px;
 }
-
-/* Buttons */
 
 input.button {
   font-family: 'Karla', sans-serif;
@@ -187,6 +189,8 @@ img.photoTwo {
     margin: 0 auto;
 }
 
+/* Lines over the photo */
+
 .line1 {
     width: 373px;
     height: 47px;
@@ -197,7 +201,6 @@ img.photoTwo {
         rotate(72deg); 
     position: absolute;
 }
-/* Lines over the photo */
 
 .boxForLines {
     margin: 0 auto;
@@ -265,7 +268,7 @@ p.menuText {
     z-index: 3;
 }
 
-/* burger lines with just CSS */
+/* Burger Lines */
 
 .burger {
     position: relative;
