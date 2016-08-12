@@ -342,7 +342,7 @@ footer {
  
     body {
       background-color: yellow;
-      width: 767px;
+      width: auto;
     }
  
     .mainTextBox {
@@ -473,7 +473,6 @@ footer {
       
     #bottomMenu {
         height: 61px;
-        width: 1600px;
         z-index: 4;
         background-color: white;
         position: relative;
