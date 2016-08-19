@@ -22,6 +22,7 @@ h1 {
     font-weight: 700;
     color: white;
     margin: 0;
+    transition: font-size 2s;
 }
 
 /* Regular Font */
@@ -38,6 +39,7 @@ h2 {
     font-weight: 400;
     color: white;
     margin: 0;
+    transition: font-size 2s;
 }
 
 /* Parallax  */
@@ -81,15 +83,14 @@ h2 {
 /* Main Text Box */
 
 .mainTextBoxAnchor {
-    float: right;
     position: absolute;
-    top:50%;
-    left:50%    
+    bottom:10%;
+    right:10%;
+    width:400px;
+    transition: width 2s;
 }
 
 .mainTextBox {
-    position: relative;
-    width: 77%;
 }
 
 .mainText {
@@ -131,18 +132,57 @@ button.button {
   width: 191px;
   height: 53px;
   margin-left:10px;
+  transition: width 2s, font-size  2s, height 2s;
 }
 
 /* Bottom Stuff */
 
 /* Bottom Menu */
 
+p.menuText {
+    margin-left: 15px;
+    margin-top: 23px;
+    color: rgba(16,59,88,100);   
+}
 
 /* Bottom Image */
 img.photoTwo {
     width: 65%;
     position: relative;
     margin: 0 auto;
+}
+
+#bottomMenu {
+    height: 61px;
+    z-index: 4;
+    position: relative;
+    top: -60px;
+    z-index: 3;
+    background-color:white;
+}
+
+
+.footerBox {
+    margin-top: 2%;
+    display: table;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 20px;
+}
+
+.footerTitle {
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: rgba(16,59,88,100);
+}
+
+.footerLink {
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(16,59,88,100);
 }
 
 @media only screen 
@@ -153,21 +193,23 @@ img.photoTwo {
     body {
         background-color: cyan;
     }  
-      
-    .mainTextBoxAnchor {
-        float: right;
-        position: relative;
-        top:25%;
-        left:25%    
-    }
 
-    .mainTextBox {
-        position: relative;
-        width: 77%;
-    }
-      
     .regular {
         font-size: 24px;
+    }
+
+    .bold {
+        font-size: 24px;
+    }
+
+    .mainTextBoxAnchor{
+        width: 300px;
+    }
+
+    button.button {
+        font-size: 10px;
+        width: 150px;
+        height: 45px;
     }
       
     .secondText {
@@ -175,12 +217,92 @@ img.photoTwo {
         margin-bottom: 10px;
         margin-left: 2px;
     } 
-      
-    #bottomMenu {
-        height: 61px;
-        z-index: 4;
-        position: relative;
-        top: -60px;
-        z-index: 3;
+
+}
+
+@media only screen and (max-device-width: 360px){
+    
+    body{
+        height:85%;
+    }
+    
+    .parallaxBottom {
+        height: 260px;
+    }
+    
+    .mainTextBoxAnchor{
+        position: static;
+        width:90%;
+        margin:0 auto;
+        padding-top: 75%;
+    }
+    
+    .secondText {
+        width:61%;
+        font-size: 10px;
+        margin-bottom: 10px;
+        margin-left: 2px;
+    } 
+    
+    .regular {
+        font-size: 18px;
+    }
+    
+    .bold {
+        font-size: 18px;
+    }
+    
+    button.button {
+        font-size: 12px;
+        padding: 10px 20px 10px 20px;
+        border: solid white 2px;
+        width: 95px;
+        height: 53px;
     }  
+    
+    .photoMain{
+        
+    }
+    
+    .bottomBox {
+        position: static;
+        margin: 0 auto;
+        width: 80%;
+    }
+    
+    p.bottomTextTop {
+        margin: 0 auto;
+    }
+    
+    p.menuText {
+        font-size: 12px;
+        padding-top: 15px; 
+    }
+    
+    #bottomMenu {
+        height: 40px;
+        position: relative;
+        top: -63px;
+    }
+    
+    .secondMenu {
+        display: block;
+    }
+
+    footer {
+        width:70%;
+        display: table;
+    }
+    
+    .footerBox {
+        line-height: 15px;
+    }  
+    
+    .footerTitle {
+        font-size: 14px;
+    }
+
+    .footerLink {
+        font-size: 12px;
+    }
 }
