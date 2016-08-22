@@ -22,7 +22,7 @@ h1 {
     font-weight: 700;
     color: white;
     margin: 0;
-    transition: font-size 2s;
+    transition: font-size 1s;
 }
 
 /* Regular Font */
@@ -39,7 +39,7 @@ h2 {
     font-weight: 400;
     color: white;
     margin: 0;
-    transition: font-size 2s;
+    transition: font-size 1s;
 }
 
 /* Parallax  */
@@ -51,7 +51,7 @@ h2 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; 
-    z-index: 1;
+    z-index: -1;
     height: inherit;
 }
 
@@ -69,25 +69,36 @@ h2 {
             rgba(255,255,255,0));
     background-color:rgba(0,0,0,0.5);
     content: '';
-    z-index: 1;
+    z-index: 2;
 }
 
 .parallaxBottom {
-    height: inherit;
+    height:100%;
 }
 
 .parallaxTop img {
     width: auto;
 }
 
+.bottomTextTop{
+    text-align:center;
+    font-size: 22px;
+    padding-bottom: 5px;
+}
+
+.third{
+    height:50%;
+    background-color:#860000;
+}
+
 /* Main Text Box */
 
 .mainTextBoxAnchor {
     position: absolute;
-    bottom:10%;
+    bottom:18%;
     right:10%;
     width:400px;
-    transition: width 2s;
+    transition: width 1s;
 }
 
 .mainTextBox {
@@ -105,7 +116,57 @@ h2 {
     margin-bottom: 10px;
     margin-left: 2px;
 }
+/* arrow */
 
+#arrow {
+    width: 10px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.arrow-frame {
+    margin: 0 auto;
+	width: 50px;
+	height: 50px;
+    z-index: 3;
+    position: absolute;
+    bottom:11%;
+}
+.arrow-shaft {
+	background-color: #fff;
+	width: 3px;
+	height: 48px;
+	margin: 0 auto;
+	top: 8px;
+	position: relative;
+}
+.arrow-head {
+	display: inline;
+	position: relative;
+	margin: 0 auto;
+	left: 21px;
+	bottom: 3px;
+}
+.arrow-head-left {
+	background-color: white;
+	width: 4px;
+	height: 10px;
+	display: inline-block;
+	margin: -1px;
+	-ms-transform: rotate(325deg);
+	-webkit-transform: rotate(325deg); 
+	transform: rotate(-45deg);
+}
+.arrow-head-right {
+	background-color: white;
+	width: 4px;
+	height: 10px;
+	display: inline-block;
+	margin: -1px;
+	-ms-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg); 
+	transform: rotate(45deg);
+}
 /* buttons */
 
 form.buttonClick {
@@ -132,27 +193,35 @@ button.button {
   width: 191px;
   height: 53px;
   margin-left:10px;
-  transition: width 2s, font-size  2s, height 2s;
+  transition: width 1s, font-size 1s, height 1s;
 }
 
 /* Bottom Stuff */
 
+.buffer {
+    height: 175px;
+}
+
 /* Bottom Menu */
 
 p.menuText {
+    position: absolute;
     margin-left: 15px;
     margin-top: 23px;
     color: rgba(16,59,88,100);   
 }
 
 /* Bottom Image */
+
 img.photoTwo {
-    width: 65%;
+    display: block;
+    width: 72%;
     position: relative;
     margin: 0 auto;
 }
 
 #bottomMenu {
+    box-shadow: 0px 17px 59px -23px rgba(0,0,0,0.72);
     height: 61px;
     z-index: 4;
     position: relative;
@@ -160,10 +229,33 @@ img.photoTwo {
     z-index: 3;
     background-color:white;
 }
+/* Lines over the photo */
 
+/* burger menu */
+
+.burger {
+    position: absolute;
+    display: inline-block;
+    right: 6%;
+    top: 40%;
+    width: 22px;
+    height: 3px;
+    margin-right: 2px;
+    border-top: 3px solid rgba(16,59,88,100);
+    border-bottom: 3px solid rgba(16,59,88,100);
+}
+
+.burger:before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    width: 100%;
+    border-top: 3px solid rgba(16,59,88,100);
+}
 
 .footerBox {
-    margin-top: 2%;
+    margin-top: 7%;
     display: table;
     text-align: center;
     margin-left: auto;
@@ -204,6 +296,9 @@ img.photoTwo {
 
     .mainTextBoxAnchor{
         width: 300px;
+        padding-top: 70%;
+        right:5%;
+        bottom: 20%;
     }
 
     button.button {
@@ -217,28 +312,42 @@ img.photoTwo {
         margin-bottom: 10px;
         margin-left: 2px;
     } 
+      
+    .buffer {
+        height: 250px;
+    }
+     
+    .bottomTextTop {
+        font-size: 20px;
+        padding-bottom: 12px;
+    }
+      
+    img.photoTwo {
+        width: 75%;
+    }
+      
+    footer {
+        padding-top:100px;
+    }
+    
 
 }
 
 @media only screen and (max-device-width: 360px){
-    
-    body{
-        height:85%;
-    }
-    
+
     .parallaxBottom {
-        height: 260px;
+        height: 100%;
     }
     
     .mainTextBoxAnchor{
-        position: static;
-        width:90%;
-        margin:0 auto;
-        padding-top: 75%;
+        width:220px;
+        padding-top: 70%;
+        right:1%;
+        bottom: 20%;
     }
     
     .secondText {
-        width:61%;
+        width:90%;
         font-size: 10px;
         margin-bottom: 10px;
         margin-left: 2px;
@@ -260,8 +369,25 @@ img.photoTwo {
         height: 53px;
     }  
     
+    .arrow-frame {
+        bottom:9%;
+    }    
     .photoMain{
         
+    }
+    
+    .boxForLines {
+        margin-left: -17%;
+        margin-top: -73%;
+    }
+
+    .line1 {
+        width: 120px;
+        height: 47px;
+    }
+
+    .buffer {
+        height: 250px;
     }
     
     .bottomBox {
@@ -275,8 +401,8 @@ img.photoTwo {
     }
     
     p.menuText {
-        font-size: 12px;
-        padding-top: 15px; 
+        font-size: 14px;
+        top: 15px; 
     }
     
     #bottomMenu {
@@ -285,17 +411,26 @@ img.photoTwo {
         top: -63px;
     }
     
+    .bottomTextTop {
+        font-size: 18px;
+        padding-bottom: 12px;
+    }
+    
     .secondMenu {
         display: block;
     }
 
     footer {
+        position: relative;
         width:70%;
-        display: table;
+        display: block;
+        margin: 0 auto;
+        padding-top:120px;
     }
     
     .footerBox {
         line-height: 15px;
+        margin-top: 115px;
     }  
     
     .footerTitle {
