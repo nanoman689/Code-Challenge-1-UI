@@ -58,6 +58,10 @@ h2 {
 .parallaxTop:after {
     display: block;
     position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
     background-blend-mode: darken;
     background-image:
         -webkit-linear-gradient(bottom, rgba(24,118,186,100), 40%, rgba(255,255,255,0));
@@ -69,7 +73,7 @@ h2 {
             rgba(255,255,255,0));
     background-color:rgba(0,0,0,0.5);
     content: '';
-    z-index: 2;
+    z-index: 1;
 }
 
 .parallaxBottom {
@@ -99,6 +103,7 @@ h2 {
     right:10%;
     width:400px;
     transition: width 1s;
+    z-index: 3;
 }
 
 .mainTextBox {
@@ -220,6 +225,10 @@ img.photoTwo {
     margin: 0 auto;
 }
 
+.photoMain {
+    position: relative;
+}
+
 #bottomMenu {
     box-shadow: 0px 17px 59px -23px rgba(0,0,0,0.72);
     height: 61px;
@@ -230,6 +239,56 @@ img.photoTwo {
     background-color:white;
 }
 /* Lines over the photo */
+
+.boxForLines {
+    position: absolute;
+    border-width: 2px;
+    border-style: solid;
+    border-top:none;
+    border-bottom: none;
+    border-color: black;
+}
+/*
+
+.line1 {
+    width: 373px;
+    height: 47px;
+    border-bottom: 1px solid black;
+    -webkit-transform:
+        translateY(75%)
+        translateX(5px)
+        rotate(72deg); 
+    position: absolute;
+}
+
+.boxLine1 {
+    position: absolute;
+    margin-left: 69%;
+    margin-top: 12%;
+}
+
+.boxLine2 {
+    position: absolute;
+    margin-left: 5%;
+    margin-top: 22%;
+}
+
+.bottomBox {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top:20px;
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+    -webkit-flex-direction:column;
+        -ms-flex-direction:column;
+            flex-direction:column;
+    margin-top:11%;
+}
+
+*/
 
 /* burger menu */
 
