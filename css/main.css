@@ -42,6 +42,10 @@ h2 {
     transition: font-size 1s;
 }
 
+a {
+    cursor:pointer;
+}
+
 /* Parallax  */
 
 .parallaxTop {
@@ -130,6 +134,7 @@ h2 {
 }
 
 .arrow-frame {
+    cursor:pointer;
     margin: 0 auto;
 	width: 50px;
 	height: 50px;
@@ -186,6 +191,7 @@ form.buttonClick {
 }
 
 button.button {
+  cursor:pointer;
   font-family: 'Karla', sans-serif;
   font-weight: 700;    
   color: #ffffff;
@@ -248,49 +254,12 @@ img.photoTwo {
     border-bottom: none;
     border-color: black;
 }
-/*
-
-.line1 {
-    width: 373px;
-    height: 47px;
-    border-bottom: 1px solid black;
-    -webkit-transform:
-        translateY(75%)
-        translateX(5px)
-        rotate(72deg); 
-    position: absolute;
-}
-
-.boxLine1 {
-    position: absolute;
-    margin-left: 69%;
-    margin-top: 12%;
-}
-
-.boxLine2 {
-    position: absolute;
-    margin-left: 5%;
-    margin-top: 22%;
-}
-
-.bottomBox {
-    width: 100%;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    margin-top:20px;
-    -webkit-box-orient:vertical;
-    -webkit-box-direction:normal;
-    -webkit-flex-direction:column;
-        -ms-flex-direction:column;
-            flex-direction:column;
-    margin-top:11%;
-}
-
-*/
 
 /* burger menu */
+
+.burgerBox {
+    cursor:pointer;
+}
 
 .burger {
     position: absolute;
