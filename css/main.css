@@ -22,6 +22,7 @@ h1 {
     font-weight: 700;
     color: white;
     margin: 0;
+    -webkit-transition: font-size 1s;
     transition: font-size 1s;
 }
 
@@ -39,6 +40,7 @@ h2 {
     font-weight: 400;
     color: white;
     margin: 0;
+    -webkit-transition: font-size 1s;
     transition: font-size 1s;
 }
 
@@ -69,6 +71,12 @@ a {
     background-blend-mode: darken;
     background-image:
         -webkit-linear-gradient(bottom, rgba(24,118,186,100), 40%, rgba(255,255,255,0));
+    background-image:
+        -webkit-linear-gradient(
+            bottom,
+            rgba(24,118,186,100),
+            40%,
+            rgba(255,255,255,0));
     background-image:
         linear-gradient(
             to top,
@@ -105,7 +113,8 @@ a {
     position: absolute;
     bottom:18%;
     right:10%;
-    width:400px;
+    width:405px;
+    -webkit-transition: width 1s;
     transition: width 1s;
     z-index: 3;
 }
@@ -163,8 +172,8 @@ a {
 	height: 10px;
 	display: inline-block;
 	margin: -1px;
-	-ms-transform: rotate(325deg);
-	-webkit-transform: rotate(325deg); 
+	-webkit-transform: rotate(325deg);
+    -ms-transform: rotate(325deg);
 	transform: rotate(-45deg);
 }
 .arrow-head-right {
@@ -173,13 +182,15 @@ a {
 	height: 10px;
 	display: inline-block;
 	margin: -1px;
-	-ms-transform: rotate(45deg);
-	-webkit-transform: rotate(45deg); 
+	-webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
 	transform: rotate(45deg);
 }
 /* buttons */
 
 form.buttonClick {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: relative;
     right: 5px;
@@ -204,6 +215,7 @@ button.button {
   width: 191px;
   height: 53px;
   margin-left:10px;
+  -webkit-transition: width 1s, font-size 1s, height 1s;
   transition: width 1s, font-size 1s, height 1s;
 }
 
@@ -226,7 +238,7 @@ p.menuText {
 
 img.photoTwo {
     display: block;
-    width: 72%;
+    width: 69%;
     position: relative;
     margin: 0 auto;
 }
@@ -248,11 +260,14 @@ img.photoTwo {
 
 .boxForLines {
     position: absolute;
-    border-width: 2px;
+    border-width: 1px;
     border-style: solid;
     border-top:none;
     border-bottom: none;
     border-color: black;
+    -ms-transform-origin: center center;
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
 }
 
 /* burger menu */
@@ -310,10 +325,6 @@ img.photoTwo {
   and (max-device-width: 767px)
   and (-webkit-min-device-pixel-ratio: 2)  {
 
-    body {
-        background-color: cyan;
-    }  
-
     .regular {
         font-size: 24px;
     }
@@ -336,7 +347,7 @@ img.photoTwo {
     }
       
     .secondText {
-        font-size: 12px;
+        font-size: 10px;
         margin-bottom: 10px;
         margin-left: 2px;
     } 
@@ -402,11 +413,6 @@ img.photoTwo {
     }    
     .photoMain{
         
-    }
-    
-    .boxForLines {
-        margin-left: -17%;
-        margin-top: -73%;
     }
 
     .line1 {

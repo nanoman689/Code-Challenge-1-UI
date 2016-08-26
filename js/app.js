@@ -42,28 +42,45 @@ $(window).on('load', function(){
 
    
     $(window).resize(function(){
-        $(".boxForLines").offset({top:$(".photoTwo").offset().top,left:$(".photoTwo").offset().left});
-        $(".boxForLines").height($(".photoTwo").height());
-        $(".boxForLines").width($(".photoTwo").width());
+        var top = $(".photoTwo").offset().top;
+        var left = $(".photoTwo").offset().left;
+        console.log('Top:' + top + ', left: ' + left );
+        $(".boxForLines").css({
+            "transform":"rotate(0deg)",
+            "-ms-transform":"rotate(0deg)",
+            "-webkit-transform":"rotate(0deg)"
+        });
+        $(".boxForLines").offset({top:(top+55),left:(left+15)});
+        $(".boxForLines").height($(".photoTwo").height()-80);
+        $(".boxForLines").width($(".photoTwo").width()-33);
 
             var boxWidth = $(".boxForLines").width();
             var boxHeight = $(".boxForLines").height();
+        console.log(boxWidth);
             $(".boxForLines").css({
-                    "transform-origin":boxWidth/2+"px "+ boxHeight/2+"px",
-                    "transform":"rotate(-27deg)"
+                    "transform":"rotate(-17deg)",
+                    "-ms-transform":"rotate(-17deg)",
+                    "-webkit-transform":"rotate(-17deg)"
             });
 
     });
-                     
-    $(".boxForLines").offset({top:$(".photoTwo").offset().top,left:$(".photoTwo").offset().left});
-    $(".boxForLines").height($(".photoTwo").height());
-    $(".boxForLines").width($(".photoTwo").width());
+
+    var top = $(".photoTwo").offset().top;
+    var left = $(".photoTwo").offset().left;
+    console.log('Top:' + top + ', left: ' + left );
+    $(".boxForLines").offset({top:(top+55),left:(left+15)});
+    $(".boxForLines").height($(".photoTwo").height()-80);
+    $(".boxForLines").width($(".photoTwo").width()-33);
     
-    var boxWidth = $(".boxForLines").width();
+        var boxWidth = $(".boxForLines").width();
         var boxHeight = $(".boxForLines").height();
+
+        console.log('Top of box: ' + $('.boxForLines').offset().top);
         $(".boxForLines").css({
-                "transform-origin":boxWidth/2+"px "+ boxHeight/2+"px",
-                "transform":"rotate(-27deg)"
+                "transform":"rotate(-17deg)",
+                "-ms-transform":"rotate(-17deg)",
+                "-webkit-transform":"rotate(-17deg)"
         });
+        console.log('Top of box after rotate: ' + $('.boxForLines').offset().top);
     
 });
