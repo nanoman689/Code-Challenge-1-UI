@@ -321,7 +321,6 @@ img.photoTwo {
 }
 
 @media only screen 
- 
   and (max-device-width: 767px)
   and (-webkit-min-device-pixel-ratio: 2)  {
 
@@ -372,7 +371,9 @@ img.photoTwo {
 
 }
 
-@media only screen and (max-device-width: 360px){
+@media only screen 
+    and (max-device-width: 360px)
+    and (-webkit-min-device-pixel-ratio: 1){
 
     .parallaxBottom {
         height: 100%;
@@ -396,6 +397,10 @@ img.photoTwo {
         font-size: 18px;
     }
     
+    img.photoTwo {
+        width: 86%;    
+    }
+        
     .bold {
         font-size: 18px;
     }
