@@ -53,15 +53,16 @@ $(window).on('load', function(){
             "-ms-transform":"rotate(0deg)",
             "-webkit-transform":"rotate(0deg)"
         });
-        $(".boxForLines").css({top:(topHeight*(20/100)),left:(leftWidth*(22/100))});
+        $(".boxForLines").css({top:(topHeight*(10/100)),left:(leftWidth*(3/100))});
         $(".boxForLines").height($(".photoTwo").height()*(80/100));
-        $(".boxForLines").width($(".photoTwo").width()*(94/100));
-
+        $(".boxForLines").width($(".photoTwo").width()*(95/100));
+        
             $(".boxForLines").css({
-                    "transform":"rotate(-16deg)",
-                    "-ms-transform":"rotate(-16deg)",
-                    "-webkit-transform":"rotate(-16deg)"
+                    "transform":"rotate(-15deg)",
+                    "-ms-transform":"rotate(-15deg)",
+                    "-webkit-transform":"rotate(-15deg)"
             });
+
     }
     
     $(window).resize(drawBoxLines);

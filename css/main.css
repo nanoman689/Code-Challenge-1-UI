@@ -150,6 +150,7 @@ a {
     z-index: 3;
     position: absolute;
     bottom:13%;
+    left: 44%;
 }
 .arrow-shaft {
 	background-color: #fff;
@@ -238,13 +239,16 @@ p.menuText {
 
 img.photoTwo {
     display: block;
-    width: 69%;
+    width: 100%;
     position: relative;
     margin: 0 auto;
 }
 
 .photoMain {
     position: relative;
+    width: 80%;
+    margin: 0 auto;
+    display: block;
 }
 
 #bottomMenu {
@@ -321,8 +325,7 @@ img.photoTwo {
 }
 
 @media only screen 
-  and (max-device-width: 325px)
-  and (-webkit-min-device-pixel-ratio: 2)  {
+  and (max-device-width: 325px)  {
 
     .arrow-frame {
         bottom: 14%;  
@@ -334,8 +337,7 @@ img.photoTwo {
 }
 
 @media only screen 
-  and (max-device-width: 767px)
-  and (-webkit-min-device-pixel-ratio: 2)  {
+  and (max-device-width: 767px) {
 
     .regular {
         font-size: 24px;
@@ -372,11 +374,7 @@ img.photoTwo {
         font-size: 20px;
         padding-bottom: 0px;
     }
-      
-    img.photoTwo {
-        width: 75%;
-    }
-      
+        
     footer {
         padding-top:100px;
     }
@@ -385,8 +383,7 @@ img.photoTwo {
 }
 
 @media only screen 
-    and (max-device-width: 360px)
-    and (-webkit-min-device-pixel-ratio: 1){
+    and (max-device-width: 360px) {
 
     .parallaxBottom {
         height: 100%;
@@ -409,11 +406,7 @@ img.photoTwo {
     .regular {
         font-size: 18px;
     }
-    
-    img.photoTwo {
-        width: 86%;    
-    }
-        
+     
     .bold {
         font-size: 18px;
     }
@@ -427,12 +420,8 @@ img.photoTwo {
     }  
 
     .photoMain{
-        
-    }
-
-    .line1 {
-        width: 120px;
-        height: 47px;
+        width: 85%;
+        margin: 0 auto;
     }
 
     .buffer {
